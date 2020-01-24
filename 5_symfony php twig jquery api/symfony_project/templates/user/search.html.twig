@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{{ encore_entry_link_tags('app') }}
+{# <link href="../style.css" rel="stylesheet"> #}
+ {# array(
+                'id' => $content["results"][0]["id"],
+                'logo_path' =>$content["results"][0]["logo_path"],
+                'name' => $content["results"][0]["name"],
+                'origin_country'=>$content["results"][0]["origin_country"]
+            ) #}
+<div style="height:90vh" class ="cont" >
+{# ^ppppp
+  <div style="position: relative;
+    margin: 0 auto;
+    height: 100%;" > #}
+   
+{# ;overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;" #}
+{# style="height:90vh; overflow: scroll;
+overflow-x: hidden;" #}
+    {% for movie in movies %}
+     {# ;charset=UTF-8,%3Csvg%20width%3D%22318%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20318%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_158bd1d28ef%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_158bd1d28ef%22%3E%3Crect%20width%3D%22318%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22129.359375%22%20y%3D%2297.35%22%3EImage%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"             #}
+    <div class="card mb-3">
+      <div><button type="button" class="bg-secondary text-light close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+      </button><h3 class="card-header">{{ movie.title }}</h3>
+    </div>
+  
+      <div class="card-body">
+        <h5 class="card-title"data-id='{{movie.id}}' data-title='{{ movie.original_title }}'>Titre Original </br> {{ movie.original_title }}</h5>
+        <h6 class="card-subtitle text-muted">Langue:</br> {{ movie.original_language }}</h6>
+      </div>
+      <a class="imgclic btn p-0 m-0"><img style="height: auto; width:100%; display: block;" src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="Card image"></a>
+      <div class="card-body">
+        <p class="ct" style="visibility:hidden;" data-overview='{{ movie.overview }}'></p>
+        {# |length > 50 ? movie.overview|slice(0, 50) ~ '...' : movie.overview  }} #}
+      </div>
+      <ul class="list-group list-group-flush">
+        {# <li class="list-group-item">Langage {{ movie.original_language }} </li> #}
+        <li class="list-group-item">Release date: {{ movie.release_date }}</li>
+        {# <li class="list-group-item">{{ movie.overview }}</li> #}
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">Voir plus</a>
+        {# <a href="#" class="card-link">Another link</a> #}
+      </div>
+      <div class="card-footer text-muted">
+        2 days ago
+      </div>
+    </div>
+                {# {{ movie.logo_path }}
+                {{ movie.name }}
+                {{ movie.origin_country }} #}
+            {% endfor %}
+        {# {{ id }}
+        {{ logo_path }}
+        {{  name }}
+        {{ origin_country }} #}
+        
+  {# </div> #}
+</div>
+{% endblock %}
+{% block div %}
+<form action="/ajax" method="post" class="favorite">
+  <input name="name" class="favorite p-0 m-0 btn" type="button"><button id="addfav" type="button" class="btn btn-primary btn-lg">Add to Favorite</button></input>
+  </form>
+<div id="div_content" style="height:90vh;" class="w-100 p-0 m-0  d-inline-block bg-secondary">
+{% block javascripts %}
+
+
+{% endblock %}
+</div>
+
+{% endblock %}
+
+{% block button %}
+{{ encore_entry_script_tags('app') }}
+<div class="mt-5 container  bg-secondary h-100" style="max-height: 100%">
+<a href="#" id="scroll-up-button" class="btn btn-secondary " tabindex="-1" role="button" aria-disabled="true">Link</a>
+<a href="#" id="scroll-down-button" class=" btn btn-secondary " tabindex="-1" role="button" aria-disabled="true">Link</a>
+</div>
+{% endblock %}

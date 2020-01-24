@@ -1,0 +1,36 @@
+.cont {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    
+    /* height: 90vh; */
+     
+}
+.cont::-webkit-scrollbar {  
+    width: 0;
+    height: 0;
+} 
+.cont2{
+    position: relative;
+    margin: 0 auto;
+    height: 40px;
+}
+.cont2 .transbutton{
+    position: absolute; 
+  top: 0; 
+  background: rgb(0, 0, 0);
+
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1; 
+  width: 100%;
+  padding: 20px; 
+}
+#scroll-up-button{
+    background-color: burlywood;
+}
+#scroll-down-button{
+    background-color: burlywood;
+}
+.favorite{
+    visibility: hidden;
+}
