@@ -63,22 +63,14 @@ function attaquePerso(reponse){
         document.getElementById(arr[logLength-2][1][0]).childNodes[1].innerHTML=arr[logLength-2][1][1];
     }
     elText.innerHTML="";
-    // function sleep(ms) {
-    //     return new Promise(resolve => setTimeout(resolve, ms));
-    //   }
-      
-    //   console.log("Hello");
-    //   sleep(2000).then(() => { console.log("World!"); });
-
     for(i=0;i<=textLog;i++){
         // console.log(arr[i][1]);
-        
         let strLog=arr[i][1];
 
         setTimeout(function(){
             elText.innerHTML+=strLog+'<br/>';
             }
-            , 500);
+            , 1000);
     }
 }
 document.getElementById("sorti").addEventListener("click",function(e){
