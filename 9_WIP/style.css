@@ -1,0 +1,120 @@
+body{
+    margin:0;
+}
+.container{
+    /* margin:0;
+    padding:0; */
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.nav{
+    background-color:#158cba;
+    height:100px;
+    display:flex;
+    position:fixed;
+    width:100%;
+    color:#f0f0f0;
+}
+.header{
+    min-height: 100%;
+}
+#logo{
+    width:100px;
+}
+body{
+    background-color:#ccc3b6;
+    color:#555;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+h1{
+    font-size:3rem;
+}
+.space{
+    height:150px;
+}
+section{
+    /* height:200px; */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+article{
+    width:80%;
+    background-color: #f0f0f0;
+    margin-bottom:10px;
+    padding:20px;
+    padding-bottom: 0;
+    border-radius: .25rem;
+    
+    
+}
+article:hover{
+    box-shadow:5px 5px 20px #555555;
+    width:82%;
+}
+.img-float{
+    float:left;
+    padding:20px;
+}
+img:hover{
+    width:105%;
+    height:105%;
+}
+.link{
+    color:#f0f0f0;
+    display:block;
+    margin-left:50px;
+    margin-top:15px;
+    font-size:1.5em;
+    text-decoration:none;
+}
+.link:hover{
+    text-decoration:underline #f0f0f0;
+}
+footer{
+    background-color:#158cba;
+    width:100%;
+    height:200px;
+    text-align: center;
+    padding-top:25px;
+}
+                            /* FORM */
+.form-group{
+    display:flex;
+    width:100%;
+    flex-direction: column;
+}
+.form-control{
+    width:100%;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    font-size: 1.5rem; 
+}
+label{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.btn{
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    background-color: #158cba;
+    border-color: #158cba;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    margin:auto;
+    margin-bottom:50px;
+}
+.btn:hover{
+    background-color: #ccb08a;
+    border: 1px solid transparent;
+}
+.btn-c{
+    display:flex;
+}
